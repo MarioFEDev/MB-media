@@ -55,4 +55,5 @@ function backspace(nextFunction) {
     setTimeout(() => backspace(nextFunction), typingTime); // Continue backspacing
 }
 
-window.onload(setTimeout(() => {typing1()}, 5400));
+
+

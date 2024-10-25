@@ -48,6 +48,10 @@
             --greyish:#A8AEAF;
             --greyishblue:#9bd8e3;
             --whiteish:#F1F3F4;
+
+
+            --slide-left:'';
+            --fade-in-intro:'';
         }
         *{
             font-family: rubik-regular;
@@ -154,7 +158,7 @@
             z-index: 2;
             transform: translateY(80px);
             opacity: 0;
-            animation: fade-in-intro 1s ease-out 2s 1 forwards;
+            animation: var(--fade-in-intro);
         }
         .img-con::before{
             content: '';
@@ -167,7 +171,7 @@
             background-position: center;
             background-size: cover;
             translate: 100%;
-            animation: slide-left 2s ease-out 1 forwards;
+            animation: var(--slide-left);
         }
         .img-con::after{
             content: '';
@@ -241,6 +245,8 @@
             margin-top: 300px;
         }
 
+
+
         ::-webkit-scrollbar{
             width: 10px;
         }
@@ -281,11 +287,20 @@
 
     <footer>
         <section class="foot-sec1">
-            
+            <div class="foot-name"></div>
+            <div class="contacts"></div>
+            <div class="links"></div>
         </section>
     </footer>
     <script src="typing.js"></script>
     <script>
+        function loadAnimations(){
+            document.documentElement.style.setProperty('--slide-left', 'slide-left 2s ease-out 1 forwards ')
+            document.documentElement.style.setProperty('--fade-in-intro', 'fade-in-intro 1s ease-out 2s 1 forwards ')
+            setTimeout(() => {typing1()}, 3500) 
+        }
+
+        window.onload(setTimeout(() => {loadAnimations()}, 2000))
 
     </script>
 </body>
