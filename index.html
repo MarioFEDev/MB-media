@@ -55,6 +55,7 @@
         }
         *{
             font-family: rubik-regular;
+            color: white;
         }
         body{
             background-color:var(--main);
@@ -105,6 +106,7 @@
         .smma{
             font-family: rubik-bold;
             font-size: 8pt;
+            color: var(--main);
         }
         nav{
             width: 60%;
@@ -243,9 +245,35 @@
             height: 400px;
             background-color: black;
             margin-top: 300px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            padding-top:100px ;
         }
 
-
+        .foot-sec1{
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            height: 0%;
+            width: 75%;
+        }
+        .foot-name-txt{
+            font-size: 30pt;
+            font-family: rubik-extrabold;
+        }
+        .foot-name-img{
+            width: 40%;
+            aspect-ratio: 1/1;
+        }
+        .contacts > *{
+            text-align: right;
+        }
+        .links{
+            text-align: right;
+            display: flex;
+            flex-direction: column;
+        }
+         
 
         ::-webkit-scrollbar{
             width: 10px;
@@ -287,10 +315,22 @@
 
     <footer>
         <section class="foot-sec1">
-            <div class="foot-name"></div>
-            <div class="contacts"></div>
-            <div class="links"></div>
+            <div class="foot-name">
+                    <div class="foot-name-img"> <img src="logomono.png" alt="logo" width="100%" height="100%"></div>
+                    <div class="foot-name-txt">MB MEDIA</div>
+            </div>
+            <div class="contacts">
+                <h2>CONTACT INFO</h2>
+                <p>Email: loremispum@gmail.com</p>
+            </div>
+            <div class="links">
+                <a href="#">ABOUT US</a><br>
+                <a href="#">MORE INFO</a><br>
+                <a href="#">SOCIALS</a><br>
+                <a href="#">PRICING</a>
+            </div>
         </section>
+        <p>Copyright © MB Media 2024 All Rights Reserved</p>
     </footer>
     <script src="typing.js"></script>
     <script>
