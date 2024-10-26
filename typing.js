@@ -1,6 +1,6 @@
 let text1 = 'targeted paid advertising..';
 let text2 = 'social media management..';
-let text3 = 'client interactions and building brand loyalty.*.';
+let text3 = 'client interactions and building brand loyalty..';
 let position = 0;
 let typingTime;
 const typingDOM = document.querySelector('.typing');
