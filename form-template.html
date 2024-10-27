@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Real Estate Form</title>
+    <link rel="stylesheet" href="rubik.css">
+    <style>
+        :root{
+            --main: #091A2B;
+            --main-trans:#091a2b79;
+            --main2:#005163;
+            --essence:#3B4876;
+            --greyish:#A8AEAF;
+            --greyishblue:#9bd8e3;
+            --whiteish:#F1F3F4;
+        }
+         html, body{
+            background-image:url(3d-model-house-building.jpg) ;
+            width: 100%;
+            background-size: cover;
+            background-position: center;
+            height: 100%;
+            padding: 0px;
+            margin: 0px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            position:relative;
+        }
+        body::after{
+            content: '';
+            background-color: var(--main-trans);
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+        }
+        body > *{
+            z-index: 5;
+        }
+        .form-con{
+            width: 100%;
+            height: fit-content;
+            border: 1px solid transparent;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        form{
+            box-sizing: border-box;
+            width: 480px;
+            padding: 20px;
+            height: 450px;
+            border-radius: 20px;
+            border-top-right-radius: 5px;
+            border-bottom-right-radius: 5px;
+            background-color: rgba(192, 192, 192, 0.256);
+            backdrop-filter: blur(6px);
+            overflow-y: scroll;
+            overflow-x: hidden;
+        }
+        section{
+            margin-bottom: 20px;
+        }
+        section:nth-child(-n + 6){
+            display: flex;
+            flex-direction: column;
+        }
+        label{
+            font-family: rubik-regular;
+        }
+        input,textarea{
+            font-family: rubik-regular;
+            transition: all .4s ease;
+            width: 90%;
+            background-color: rgba(255, 255, 255, 0.498);
+            backdrop-filter: blur(70px);
+            height: 30px;
+            border-radius: 10px;
+            border: transparent;
+            font-size: 13pt;
+            padding-left: 10px;
+        }
+        input:focus{
+                outline: none;
+                height: 37px;
+                border: transparent;
+        }
+        textarea:focus{
+            height: 200px;
+            border: none;
+            outline: none;
+           
+        }
+        textarea{
+            min-height: 190px;
+            box-sizing: border-box;
+            padding: 10px;
+            resize: none;
+        }
+        form::-webkit-scrollbar{
+            background: rgba(192, 192, 192, 0.279);
+            backdrop-filter: blur(3px);
+            width: 10px;
+        }
+        form::-webkit-scrollbar-thumb{
+            background-color: var(--main-trans);
+            border-radius: 3px;
+        }
+    </style>
+</head>
+<body>
+    <div class="form-con">
+        <form>
+            <section class="sec1">
+                <label for="fname">First name</label>
+                <input type="text" name="fname" id="fname" class="def-type">
+            </section>
+            <section class="sec2">
+                <label for="lname">Last name</label>
+                <input type="text" name="lname" id="lname" class="def-type">
+            </section>
+            <section class="sec3">
+                <label for="email">Email</label>
+                <input type="text" name="email" id="email" class="def-type">
+            </section>
+            <section class="sec4">
+                <label for="phone">Phone Number</label>
+                <input type="text" name="phone" id="phone" class="def-type">
+            </section>
+            <section class="sec5">
+                <label for="property-type">Property Type:</label>
+                <input list="property-options" id="property-type" name="property-type">
+                <datalist id="property-options">
+                <option value="Residential">
+                <option value="Commercial">
+                <option value="Rental">
+                </datalist>
+            </section>
+            <section class="sec6">
+                <label for="comment">Additional Prefrences/Comments</label>
+                <textarea name="comment" id="comment" class="def-type"></textarea>
+            </section>
+        </form>
+    </div>
+</body>
+</html>
