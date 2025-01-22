@@ -71,7 +71,9 @@
         label{
             font-family: rubik-regular;
         }
-        input,textarea{
+        input[type='text'],input[type='number'],input[type='email'],
+        textarea,
+        select{
             font-family: rubik-regular;
             transition: all .4s ease;
             width: 90%;
@@ -83,7 +85,7 @@
             font-size: 13pt;
             padding-left: 10px;
         }
-        input:focus{
+        input[type='text']:focus,input[type='number']:focus,input[type='email']:focus, select:focus{
                 outline: none;
                 height: 37px;
                 border: transparent;
@@ -100,50 +102,85 @@
             padding: 10px;
             resize: none;
         }
-        form::-webkit-scrollbar{
+        ::-webkit-scrollbar{
             background: rgba(192, 192, 192, 0.279);
             backdrop-filter: blur(3px);
             width: 10px;
         }
-        form::-webkit-scrollbar-thumb{
+        ::-webkit-scrollbar-thumb{
             background-color: var(--main-trans);
             border-radius: 3px;
         }
+        .none{
+            display: none;}
+        
+        button{
+            width: 100px;
+            height: 40px;
+        }
     </style>
+
 </head>
 <body>
     <div class="form-con">
-        <form>
-            <section class="sec1">
+        <form action="" method="POST">
+            <section class="sec1"><!-- section for first name -->
                 <label for="fname">First name</label>
-                <input type="text" name="fname" id="fname" class="def-type">
+                <input type="text" name="fname" id="fname" class="def-type" maxlength="25">
             </section>
-            <section class="sec2">
+
+            <section class="sec2"><!-- section for last name -->
                 <label for="lname">Last name</label>
-                <input type="text" name="lname" id="lname" class="def-type">
+                <input type="text" name="lname" id="lname" class="def-type" maxlength="25">
             </section>
-            <section class="sec3">
+
+            <section class="sec3"><!-- section for email -->
                 <label for="email">Email</label>
-                <input type="text" name="email" id="email" class="def-type">
+                <input type="email" name="email" id="email" class="def-type" maxlength="35">
             </section>
-            <section class="sec4">
+
+            <section class="sec4"><!-- section for phone number -->
                 <label for="phone">Phone Number</label>
-                <input type="text" name="phone" id="phone" class="def-type">
+                <input type="number" name="phone" id="phone" class="def-type" maxlength="20">
             </section>
-            <section class="sec5">
+
+            <section class="sec5"><!-- section for property type -->
                 <label for="property-type">Property Type:</label>
-                <input list="property-options" id="property-type" name="property-type">
-                <datalist id="property-options">
-                <option value="Residential">
-                <option value="Commercial">
-                <option value="Rental">
-                </datalist>
+                <select id="property-type" name="property-type" onchange="updateHiddenInput('property-type', 'selected-property-type'); updateBuildingTypes()">
+                  <option value="residential">Residential</option>
+                  <option value="commercial">Commercial</option>
+                  <option value="rental">Rental</option>
+                </select>
+                <input type="hidden" id="selected-property-type" name="selected-property-type">
             </section>
-            <section class="sec6">
+
+
+
+            
+
+            <section class="sec10"><!-- section for comments -->
                 <label for="comment">Additional Prefrences/Comments</label>
                 <textarea name="comment" id="comment" class="def-type"></textarea>
             </section>
+
+            <button onclick="sendMail()" type="submit"></button>
         </form>
     </div>
+
+
+    <script>
+        const buildingType = document.getElementById("building-type")
+        var optClass ='.' + document.getElementById('property-type').value + "-options"
+        var options = document.querySelector(optClass).innerHTML
+        buildingType.innerHTML = options
+
+
+        function updateHiddenInput(selectID, inputID) {
+            const selectedValue = document.getElementById(selectID).value;
+            document.getElementById(inputID).value = selectedValue;
+        }
+    </script>
+
+
 </body>
 </html>

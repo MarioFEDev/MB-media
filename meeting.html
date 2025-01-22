@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="rubik.css">
+    <link rel="stylesheet" href="def.css">
+    <title>Book a Meeting</title>
+</head>
+<body>
+    <header>
+        <div class="logo-con">
+            <div class="logo"><img src="logo.png" alt="logo" width="100%" height="100%"></div>
+            <div class="logo-name"> MB Media <br> <span class="smma">Social Media Marketing Agency<span> </div>
+        </div>
+        <nav>
+            <a href="#" class="nav-link">HOME</a>
+            <a href="#" class="nav-link">SERVICES</a>
+            <a href="#" class="nav-link">BOOK A MEETING</a>
+            <a href="#" class="nav-link">TESTIMONIALS</a>
+            <a href="#" class="nav-link contact">CONTACT US</a>
+        </nav>
+    </header>
+
+    <form id="dateForm">
+        <label for="dateInput">Select a date:</label>
+        <input type="date" id="dateInput" style="color: black;" />
+        <button type="submit">Submit</button>
+    </form>
+    
+    <script>
+        const dateInput = document.getElementById("dateInput");
+        const form = document.getElementById("dateForm");
+    
+        // Calculate min and max dates
+        const today = new Date();
+        const twoWeeksFromToday = new Date();
+        today.setDate(today.getDate() + 3);
+        twoWeeksFromToday.setDate(today.getDate() + 17);
+    
+        const minDate = today.toISOString().split("T")[0];
+        const maxDate = twoWeeksFromToday.toISOString().split("T")[0];
+    
+        // Set min and max attributes
+        dateInput.setAttribute("min", minDate);
+        dateInput.setAttribute("max", maxDate);
+    
+        // Validate input on change
+        dateInput.addEventListener("input", () => {
+            const selectedDate = new Date(dateInput.value);
+    
+            if (selectedDate < today || selectedDate > twoWeeksFromToday) {
+                alert( `Please select a date between ${minDate} and ${maxDate}.`);
+                dateInput.value = ""; // Clear the invalid value
+            }
+        });
+    
+        // Prevent form submission if the date is invalid
+        form.addEventListener("submit", (event) => {
+            if (!dateInput.value) {
+                errorMessage.textContent = "Please select a valid date before submitting.";
+                errorMessage.style.display = "block";
+                event.preventDefault(); // Stop form submission
+            }
+        });
+    </script>
+    
+    
+</body>
+</html>

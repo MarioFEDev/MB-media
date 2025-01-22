@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MB Media</title>
+    <link rel="stylesheet" href="def.css"> 
+    <link rel="stylesheet" href="rubik.css">
+    <style>
+        :root{
+            --main: #373f74;
+            --main2:#6c91c2;
+            --essence:#3B4876;
+            --greyish:#8b8982;
+            --greyishblue:#9bd8e3;
+            --whiteish:#Fffdf8;
+        }
+        body{
+            padding-bottom: 100px;
+            background-image: url(beautiful-woman-glasses-studying-cafe-dialing-number-from.jpg);
+            background-size: cover;
+            position: relative;
+        }
+        body::after{
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color:#373f74d4 ;
+            z-index: -1;
+        }
+        section{
+            width: 100%;
+            height: fit-content;
+            margin-top: 10px;
+            display: grid;
+            grid-template-columns:repeat(2, 1fr);
+            grid-auto-rows: 100%;
+        }
+        .contact-info{
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            transform: translateY(-30px);
+        }
+        .contact-info > div{
+            width: 100%;
+            height: 26px;
+            background-color:transparent;
+            display: flex; 
+            justify-content: center;
+        }
+        .icon{
+            height: 100%;
+            aspect-ratio: 1/1;
+            background-color: transparent;
+            margin-right: 10px;
+        }
+        .info-con{
+            margin-bottom: 20px;
+        }
+        form > div{
+            display: flex;
+            flex-direction: column;
+            width: 70%;
+            margin: 5px 0 10px 0 ;
+        }
+        form > div > input{
+            width: 100%;
+            height: 30px;
+            border-radius: 6px;
+            outline: 0px;
+            background-color: rgba(255, 255, 255, 0.493);
+            backdrop-filter: blur(5px);
+            border: none;
+            padding: 5px;
+        }
+        textarea{
+            width: 100%;
+            height: 200px;
+            border-radius: 6px;
+            outline: 0px;
+            background-color: rgba(255, 255, 255, 0.493);
+            backdrop-filter: blur(5px);
+            border: none; 
+            resize: none;
+            overflow-y: scroll;
+            padding: 5px;
+        }
+        textarea::-webkit-scrollbar{
+            width: 10px;
+            background-color: var(--main2);
+        }
+        textarea::-webkit-scrollbar-thumb{
+            border-radius: 4px;
+            background-color: white;
+        }
+        textarea::-webkit-scrollbar-track{
+            border-radius: 10px;
+        }
+        h1{
+            text-align: left;
+        }
+        input[type="number"]::-webkit-inner-spin-button,
+        input[type="number"]::-webkit-outer-spin-button {
+            -webkit-appearance: none;
+            margin: 0;
+        }
+        button{
+            height: 30px;
+            border-radius: 6px;
+            outline: 0px;
+            background-color: rgba(255, 255, 255, 0.493);
+            backdrop-filter: blur(5px);
+            border: none;
+            padding: 7px;
+        }
+
+
+        @media  screen and (max-width : 550px) {
+            body{
+                background-image:url(freepik__expand__977.png) ;
+                background-position: center;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="logo-con">
+            <div class="logo"><img src="MBMEDIALOGO.png" alt="logo" width="70%" height="70%"></div>
+            <div class="logo-name"> MB Media <br> <span class="smma">Social Media Marketing Agency<span> </div>
+        </div>
+        <nav>
+            <a href="index.html" class="nav-link">HOME</a>
+            <a href="#" class="nav-link">SERVICES</a>
+            <a href="meeting.html" class="nav-link">BOOK A MEETING</a>
+            <a href="#" class="nav-link">TESTIMONIALS</a>
+            <a class="nav-link contact">CONTACT US</a>
+        </nav>
+    </header>
+
+    <section class="contact_sec">
+        <div class="contact-info">
+           <h1 style="text-align: center; margin-bottom: 20px;">Contact Info</h1>
+           <div class="info-con">
+                <div class="icon"><img src="mail_email_icon.png" alt="icon" width="100%" height="100%"></div>
+                <p class="info">MBmdiasmma@gmail.com</p>
+            </div>
+            <div class="info-con" >
+                <div class="icon"><img src="instagram_icon (1).png" alt="icon" width="100%" height="100%"></div>
+                <p class="info">mb_mdia</p>
+            </div>
+           <div class="info-con">
+               <div class="icon"><img src="whatsapp_icon (1).png" alt="icon" width="100%" height="100%"></div>
+               <p class="info">+2349038264504</p>
+           </div>     
+       </div>
+       <form class="customer-form">
+           <h1 >Customer Form</h1>
+           <div>
+               <label for="fname">First Name</label>
+               <input type="text" maxlength="25">
+           </div>
+           <div>
+               <label for="number">Phone Number</label>
+               <input type="number" maxlength="11">
+           </div>
+           <div>
+               <label for="email">Email</label>
+               <input type="email" maxlength="500">
+           </div>
+           <div>
+               <label for="complaint">How Can We Help You ?</label>
+               <textarea type="text" maxlength="1000"></textarea>
+           </div>
+
+           <button type="submit">Submit</button>
+       </form>
+   
+   </section>
+    
+</body>
+</html>

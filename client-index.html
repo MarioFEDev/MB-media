@@ -1,0 +1,359 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Client Form</title>
+    <link rel="stylesheet" href="rubik.css">
+    <style>
+        :root{
+            --main: #091A2B;
+            --main-trans:#091a2b79;
+            --main2:#005163;
+            --essence:#3B4876;
+            --greyish:#A8AEAF;
+            --greyishblue:#9bd8e3;
+            --whiteish:#F1F3F4;
+            --dev-height:0px;
+        }
+         html, body{
+            background-image:url(3d-model-house-building.jpg) ;
+            overflow: hidden;
+            width: 100%;
+            background-size: cover;
+            background-position: center;
+            height: 100%;
+            padding: 0px;
+            margin: 0px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            position:relative;
+        }
+        body::after{
+            content: '';
+            background-color: var(--main-trans);
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+        }
+        body > *{
+            z-index: 5;
+            font-family: rubik-regular;
+            box-sizing: border-box;
+        }
+
+        header{
+            width: 100%;
+            height: 55px;
+            padding-top: 5px;
+            background-color: var(--main2);
+        }
+        .logo-con{
+            height: 100%;
+            display: flex;
+            align-items: center;
+            translate: 10px;
+        }
+        .logo{
+            height: 100%;
+            aspect-ratio: 1/1;
+           
+        }
+        .logo-name{
+            margin-left: 5px;
+            font-family: rubik-bold;
+            color: var(--main);
+            font-size: 14pt;
+        }
+
+
+        .form-con{
+            width: 100%;
+            height: fit-content;
+            border: 1px solid transparent;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        form{
+            box-sizing: border-box;
+            width: 500px;
+            margin: 20px;
+            padding: 20px;
+            height: var(--dev-height);
+            border-radius: 20px;
+            border-top-right-radius: 5px;
+            border-bottom-right-radius: 5px;
+            background-color: rgba(192, 192, 192, 0.256);
+            backdrop-filter: blur(6px);
+            overflow-y: scroll;
+            overflow-x: hidden;
+        }
+        section{
+            margin-bottom: 20px;
+        }
+        section:nth-child(-n + 6){
+            display: flex;
+            flex-direction: column;
+        }
+        label, legend{
+            font-family: rubik-regular;
+        }
+        input[type='text'],input[type='number'],input[type='email'],
+        textarea,
+        select{
+            font-family: rubik-regular;
+            transition: all .4s ease;
+            width: 90%;
+            background-color: rgba(255, 255, 255, 0.498);
+            backdrop-filter: blur(70px);
+            height: 30px;
+            border-radius: 10px;
+            border: transparent;
+            font-size: 13pt;
+            padding-left: 10px;
+        }
+        input[type='text']:focus,input[type='number']:focus,input[type='email']:focus, select:focus{
+                outline: none;
+                height: 37px;
+                border: transparent;
+        }
+        textarea:focus{
+            height: 200px;
+            border: none;
+            outline: none;
+           
+        }
+        textarea{
+            min-height: 190px;
+            box-sizing: border-box;
+            padding: 10px;
+            resize: none;
+        }
+        .budget::before{
+            content: '';
+            width: 100px;
+            height: 100px;
+            background: black;
+            
+        }
+        fieldset{
+            margin-bottom: 20px;
+        }
+        fieldset > *{
+            display: block ;
+            margin-bottom: 5px;
+        }
+        ::-webkit-scrollbar{
+            background: rgba(192, 192, 192, 0.279);
+            backdrop-filter: blur(3px);
+            width: 10px;
+        }
+        ::-webkit-scrollbar-thumb{
+            background-color: var(--main-trans);
+            border-radius: 3px;
+        }
+        .none{
+            display: none;}
+        
+        button{
+            width: 100px;
+            height: 40px;
+            border-radius: 5px;
+            border: none;
+            outline: none;
+            background-color: rgba(255, 255, 255, 0.498);
+        }
+        @media (max-width: 600px) {
+            form {
+                width:350px ;
+            }
+            .logo-name{
+                font-size: 10pt;
+            }
+            form{
+                height: var(--dev-height);
+            }
+        }
+        </style>
+
+</head>
+<body>
+    <header>
+        <div class="logo-con">
+            <div class="logo"><img src="logo.png" alt="logo" width="100%" height="100%"></div>
+            <div class="logo-name"> MB Media <br> <span class="smma">Social Media Marketing Agency<span> </div>
+        </div>
+    </header>
+    <div class="form-con">
+        <form action="https://formspree.io/f/mrbgwkvz" method="POST">
+
+            <h1> Agency Information</h1>
+
+            <section class="sec1"><!-- section for name -->
+                <label for="aname">Agency name</label>
+                <input type="text" name="aname" id="aname" class="def-type" maxlength="25" required>
+            </section>
+
+            
+            <section class="sec4"><!-- section for services -->
+                <label for="services">Your Services</label>
+                <textarea type="text" name="services" id="services" class="def-type" maxlength="450"></textarea>
+            </section>
+
+            <section class="sec5"><!-- section for niche -->
+                <label for="niche">Your Niche</label>
+                <input type="text" name="niche" id="niche" class="def-type budget" maxlength="25">
+            </section>
+
+            <section class="sec6"><!-- section for offer -->
+                <label for="offer">Current Offer </label>
+                <textarea type="text" name="offer" id="offer" class="def-type" maxlength="450" placeholder="What else do you provide to your clients. For example, meetings, lead magnets, tutorials, etc" ></textarea>
+            </section>
+
+            <section class="sec1">
+                <label for="currentClients">How many clients do you currently have?</label>
+                <input type="number" id="currentClients" name="currentClients" min="0" required>
+            </section>
+            
+            <section class="sec2">
+                <label for="recurringClients">How many are recurring?</label>
+                <input type="number" id="recurringClients" name="recurringClients" min="0" required>
+            </section>
+            
+            <section class="sec3">
+                <label for="monthlyCapacity">How many can you serve in a month?</label>
+                <input type="number" id="monthlyCapacity" name="monthlyCapacity" min="0" required>
+            </section>
+
+            <fieldset>
+                <legend>Do You Have a Website?</legend>
+                <div><input type="radio" name="web?" value="yesweb" id="yes"> Yes</div>
+                <div><input type="radio" name="web?" value="noweb" id="no" > No</div>
+            </fieldset>
+            
+            <section class="sec9 none"><!-- section for url -->
+                <label for="weburl">Provide Website Name or URL</label>
+                <input type="text" name="weburl" id="weburl" class="def-type">
+            </section>
+        
+            
+            <h1>Personal Information</h1>
+
+            <section class="sec1"><!-- section for name -->
+                <label for="fname">First Name</label>
+                <input type="text" name="fname" id="fname" class="def-type" maxlength="25" required>
+            </section>
+
+            <section class="sec1"><!-- section for name -->
+                <label for="fname">Last Name</label>
+                <input type="text" name="lname" id="lname" class="def-type" maxlength="25" required>
+            </section>
+
+            <section class="sec2"><!-- section for email -->
+                <label for="email">Email</label>
+                <input type="email" name="email" id="email" class="def-type" maxlength="35" required>
+            </section>
+
+            <section class="sec3"><!-- section for phone number -->
+                <label for="phone">Phone Number</label>
+                <input type="number" name="phone" id="phone" class="def-type" maxlength="20" required>
+            </section>
+
+            <h1>Marketing Information</h1>
+
+            <fieldset>
+                <legend>Current Marketing Strategy</legend>
+                <div><input type="checkbox" name="coldoutreach" id="co" value="coldoutreach"> Cold Outreach</div>
+                <div><input type="checkbox" name="warmoutreach" id="wo" value="warmoutreach"> Warm Outreach</div>
+                <div><input type="checkbox" name="smcontent" id="smc" value="smcontent"> Social Media Content</div>
+                <div><input type="checkbox" name="paidads" id="pa" value="paidads"> Paid Ads</div>
+            </fieldset>
+
+            <section class="sec6"><!-- section for sales -->
+                <label for="markstrat">Additional Info on Marketing Strategy (Optional) </label>
+                <textarea style="height: 100px;" type="text" name="markstrat" id="markstrat" class="def-type" maxlength="450" placeholder="i.e via calls, messages etc."></textarea>
+            </section>
+
+            <section class="secbud none"><!-- section for budget -->
+                <label for="budget">Current Marketing Budget ($)</label>
+                <input type="number" name="budget" id="budget" class="def-type" maxlength="8">
+            </section>
+
+            <h1>Sales Infomation</h1>
+            
+            <section class="sec6"><!-- section for sales -->
+                <label for="salesmethod"> Current Sales Method  </label>
+                <textarea style="height: 100px;" type="text" name="salesmethod" id="salesmethod" class="def-type" maxlength="450" placeholder="i.e via calls, messages etc."></textarea>
+            </section>
+
+            <section class="sec4">
+                <label for="averageMonthlyleads">What is the average number of new leads you get per month?</label>
+                <input type="number" id="averageMonthlyleads" name="averageMonthlyleads" min="0" required>
+            </section>
+
+            <section class="sec4">
+                <label for="averageMonthlynewclients">What is the average number of new clients you sign per month?</label>
+                <input type="number" id="averageMonthlynewclients" name="averageMonthlynewclients" min="0" required>
+            </section>
+            
+
+            
+            
+           
+            <fieldset>
+                <legend>What Services Shall we Provide You With</legend>
+                <div><input type="checkbox" name="mbservice" value="leadgen">Lead Generation</div>
+                <div><input type="checkbox" name="mbservice" value="sales"> Sales</div>
+            </fieldset>
+
+            <button type="submit">SUBMIT</button>
+        </form>
+    </div>
+
+    <script>
+        const weburl = document.querySelector('.sec9')
+        const budget = document.querySelector('.secbud')
+        const radio1 = document.getElementById('yes');
+        const radio2 = document.getElementById('no');
+        const ads = document.getElementById('pa')
+
+        radio1.addEventListener('change', handleToggle);
+        radio2.addEventListener('change', handleToggle);
+        ads.addEventListener('change', budgetToggle);
+
+        function handleToggle() {
+            if (radio1.checked) {
+                weburl.classList.remove('none')
+            } else if (radio2.checked) {
+                weburl.classList.add('none')
+            }
+        }
+
+        function budgetToggle(){
+            if(ads.checked){
+                budget.classList.remove('none')
+            }else{
+                budget.classList.add('none')
+            }
+        }
+
+        function formResize(){
+            
+            var dh = window.innerHeight
+            var fh = dh - 80
+            var fhpx = fh +'px'
+            document.documentElement.style.setProperty('--dev-height', fhpx)
+            // console.log(fhpx)
+            console.log(getComputedStyle(document.documentElement).getPropertyValue('--dev-height').trim());
+        }
+        formResize()
+        window.addEventListener('resize', formResize)
+    </script>
+
+
+</body>
+</html>

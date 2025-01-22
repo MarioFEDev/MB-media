@@ -1,0 +1,351 @@
+
+            <section class="residential none" style="display: none;">
+                <section class="res-sec1">
+                    <label for="residential-property-type">Residential Property Type:</label>
+                    <select id="residential-property-type" name="residential-property-type">
+                        <option value="">Select a type</option>
+                        <option value="single-family">Single-family Home</option>
+                        <option value="multi-family">Multi-family Home</option>
+                        <option value="apartment">Apartment</option>
+                        <option value="townhouse">Townhouse</option>
+                        <option value="condo">Condominium</option>
+                        <option value="duplex">Duplex</option>
+                        <option value="bungalow">Bungalow</option>
+                        <option value="mobile-home">Mobile Home</option>
+                        <option value="ranch">Ranch-style Home</option>
+                        <option value="victorian">Victorian-style Home</option>
+                        <option value="cape-cod">Cape Cod</option>
+                        <option value="log-cabin">Log Cabin</option>
+                        <option value="co-op">Co-op Apartment</option>
+                        <option value="mixed-use-residential">Mixed-use Residential</option>
+                    </select>
+                </section>
+
+                <section class="res-sec2"><!-- Number of Bedrooms -->
+                    <label for="residential-bedrooms">Number of Bedrooms:</label>
+                    <select id="residential-bedrooms" name="residential-bedrooms">
+                        <option value="studio">Studio (0 bedrooms)</option>
+                        <option value="1-bedroom">1 Bedroom</option>
+                        <option value="2-bedrooms">2 Bedrooms</option>
+                        <option value="3-bedrooms">3 Bedrooms</option>
+                        <option value="4-plus">4+ Bedrooms</option>
+                    </select>
+                </section>
+
+                <section class="res-sec3"><!-- Desired Residential Features -->
+                    <label>Desired Residential Features:</label>
+                    <div>
+                        <input type="checkbox" id="residential-pet-friendly" name="residential-features" value="pet-friendly">
+                        <label for="residential-pet-friendly">Pet-Friendly</label>
+                    </div>
+                    <div>
+                        <input type="checkbox" id="residential-in-unit-laundry" name="residential-features" value="in-unit-laundry">
+                        <label for="residential-in-unit-laundry">In-unit Laundry</label>
+                    </div>
+                    <div>
+                        <input type="checkbox" id="residential-pool" name="residential-features" value="pool">
+                        <label for="residential-pool">Pool</label>
+                    </div>
+                    <div>
+                        <input type="checkbox" id="residential-gym" name="residential-features" value="gym">
+                        <label for="residential-gym">Gym</label>
+                    </div>
+                    <div>
+                        <input type="checkbox" id="residential-garage" name="residential-features" value="garage">
+                        <label for="residential-garage">Garage</label>
+                    </div>
+                    <div>
+                        <input type="checkbox" id="residential-yard" name="residential-features" value="yard">
+                        <label for="residential-yard">Yard/Garden</label>
+                    </div>
+                    <div>
+                        <input type="checkbox" id="residential-utilities" name="residential-features" value="utilities">
+                        <label for="residential-utilities">Utilities Included</label>
+                    </div>
+                    <div>
+                        <input type="checkbox" id="residential-ac" name="residential-features" value="ac">
+                        <label for="residential-ac">Air Conditioning</label>
+                    </div>
+                    <div>
+                        <input type="checkbox" id="residential-internet" name="residential-features" value="internet">
+                        <label for="residential-internet">High-Speed Internet</label>
+                    </div>
+                </section> 
+
+                <section class="res-sec4"><!-- Residential Location Preferences -->
+                    <label>Residential Location Preferences:</label>
+                    <div>
+                        <input type="checkbox" id="residential-neighborhoods" name="residential-location" value="specific-neighborhoods">
+                        <label for="residential-neighborhoods">Specific Neighborhoods</label>
+                    </div>
+                    <div>
+                        <input type="checkbox" id="residential-schools" name="residential-location" value="proximity-schools">
+                        <label for="residential-schools">Proximity to Schools</label>
+                    </div>
+                    <div>
+                        <input type="checkbox" id="residential-public-transport" name="residential-location" value="near-public-transport">
+                        <label for="residential-public-transport">Near Public Transportation</label>
+                    </div>
+                    <div>
+                        <input type="checkbox" id="residential-walkability" name="residential-location" value="walkability">
+                        <label for="residential-walkability">Walkability Score</label>
+                    </div>
+                    <div>
+                        <input type="checkbox" id="residential-shopping" name="residential-location" value="close-shopping">
+                        <label for="residential-shopping">Close to Shopping Centers</label>
+                    </div>
+                </section>
+
+                <section class="res-sec5">  <!-- Price Range for Buying -->
+                    <label for="residential-price">Price Range for Buying:</label>
+                    <select id="residential-price" name="residential-price">
+                        <option value="under-100000">Under $100,000</option>
+                        <option value="100000-250000">$100,000 - $250,000</option>
+                        <option value="250000-500000">$250,000 - $500,000</option>
+                        <option value="500000-1000000">$500,000 - $1,000,000</option>
+                        <option value="over-1000000">Over $1,000,000</option>
+                    </select>
+                </section> 
+
+                <section class="res-sec6"><!-- Buying Timeline -->
+                    <label for="residential-buying-timeline">Buying Timeline:</label>
+                    <select id="residential-buying-timeline" name="residential-buying-timeline">
+                        <option value="immediate">Immediately</option>
+                        <option value="within-1-month">Within 1 Month</option>
+                        <option value="1-3-months">1-3 Months</option>
+                        <option value="3-6-months">3-6 Months</option>
+                    </select>
+                </section>
+
+                <section class="res-sec7"><!-- Preferred Financing Options -->
+                    <label>Preferred Financing Options:</label>
+                    <div>
+                        <input type="radio" id="residential-cash" name="residential-financing" value="cash">
+                        <label for="residential-cash">Cash Purchase</label>
+                    </div>
+                    <div>
+                        <input type="radio" id="residential-mortgage" name="residential-financing" value="mortgage">
+                        <label for="residential-mortgage">Mortgage</label>
+                    </div>
+                    <div>
+                        <input type="radio" id="residential-fha" name="residential-financing" value="fha">
+                        <label for="residential-fha">FHA Loan</label>
+                    </div>
+                    <div>
+                        <input type="radio" id="residential-va" name="residential-financing" value="va">
+                        <label for="residential-va">VA Loan</label>
+                    </div>
+                    <div>
+                        <input type="radio" id="residential-conventional" name="residential-financing" value="conventional">
+                        <label for="residential-conventional">Conventional Loan</label>
+                    </div>
+                </section>
+            </section>
+
+            <section class="commercial none">
+                <section class="com-sec1"><!-- property type -->
+                    <label for="commercial-property-type">Commercial Property Type:</label>
+                    <select id="commercial-property-type" name="commercial-property-type">
+                        <option value="">Select a type</option>
+                        <option value="office">Office Space</option>
+                        <option value="retail">Retail Space</option>
+                        <option value="warehouse">Warehouse</option>
+                        <option value="industrial">Industrial Space</option>
+                        <option value="mixed-use">Mixed-use Property</option>
+                        <option value="land">Land for Development</option>
+                        <option value="hospitality">Hospitality (Hotels, Motels)</option>
+                        <option value="multi-family-commercial">Multi-family Commercial</option>
+                        <option value="medical">Medical Facility</option>
+                    </select>
+                </section>
+            
+                <section class="com-sec2"><!-- no of brdrooms--> 
+                    <label for="commercial-size">Desired Size (in sq. ft.):</label>
+                    <input type="number" id="commercial-size" name="commercial-size" min="0" placeholder="Enter size in sq. ft.">
+                </section>
+            
+                <section class="com-sec3"><!-- rental features -->
+                    <label>Commercial Features:</label>
+                    <div>
+                        <input type="checkbox" id="commercial-parking" name="commercial-features" value="parking">
+                        <label for="commercial-parking">Parking Available</label>
+                    </div>
+                    <div>
+                        <input type="checkbox" id="commercial-high-speed-internet" name="commercial-features" value="high-speed-internet">
+                        <label for="commercial-high-speed-internet">High-Speed Internet</label>
+                    </div>
+                    <div>
+                        <input type="checkbox" id="commercial-air-conditioning" name="commercial-features" value="air-conditioning">
+                        <label for="commercial-air-conditioning">Air Conditioning</label>
+                    </div>
+                    <div>
+                        <input type="checkbox" id="commercial-security" name="commercial-features" value="security">
+                        <label for="commercial-security">Security System</label>
+                    </div>
+                    <div>
+                        <input type="checkbox" id="commercial-elevator" name="commercial-features" value="elevator">
+                        <label for="commercial-elevator">Elevator Access</label>
+                    </div>
+                </section>
+            
+                <section class="com-sec4"><!-- rental location preference -->
+                    <label>Commercial Location Preferences:</label>
+                    <div>
+                        <input type="checkbox" id="commercial-proximity-main-road" name="commercial-location" value="proximity-main-road">
+                        <label for="commercial-proximity-main-road">Proximity to Main Roads</label>
+                    </div>
+                    <div>
+                        <input type="checkbox" id="commercial-near-public-transport" name="commercial-location" value="near-public-transport">
+                        <label for="commercial-near-public-transport">Near Public Transport</label>
+                    </div>
+                    <div>
+                        <input type="checkbox" id="commercial-industrial-area" name="commercial-location" value="industrial-area">
+                        <label for="commercial-industrial-area">Located in Industrial Area</label>
+                    </div>
+                </section>
+            
+                <section class="com-sec5"><!-- pricing range -->
+                    <label for="commercial-price">Price Range for Buying:</label>
+                    <select id="commercial-price" name="commercial-price">
+                        <option value="under-100000">Under $100,000</option>
+                        <option value="100000-250000">$100,000 - $250,000</option>
+                        <option value="250000-500000">$250,000 - $500,000</option>
+                        <option value="500000-1000000">$500,000 - $1,000,000</option>
+                        <option value="over-1000000">Over $1,000,000</option>
+                    </select>
+                </section>
+            
+                <section class="com-sec6"><!-- rental term -->
+                    <label for="commercial-buying-timeline">Buying Timeline:</label>
+                    <select id="commercial-buying-timeline" name="commercial-buying-timeline">
+                        <option value="immediate">Immediately</option>
+                        <option value="within-1-month">Within 1 Month</option>
+                        <option value="1-3-months">1-3 Months</option>
+                        <option value="3-6-months">3-6 Months</option>
+                    </select>
+                </section>
+            
+                <section class="com-sec7"><!-- financing options -->
+                    <label>Preferred Financing Options:</label>
+                    <div>
+                        <input type="radio" id="commercial-cash" name="commercial-financing" value="cash">
+                        <label for="commercial-cash">Cash Purchase</label>
+                    </div>
+                    <div>
+                        <input type="radio" id="commercial-mortgage" name="commercial-financing" value="mortgage">
+                        <label for="commercial-mortgage">Mortgage</label>
+                    </div>
+                    <div>
+                        <input type="radio" id="commercial-conventional" name="commercial-financing" value="conventional">
+                        <label for="commercial-conventional">Conventional Loan</label>
+                    </div>
+                </section>
+            </section>
+
+            <section class="rental none">
+                <section class="ren-sec1"><!-- property type -->
+                    <label for="rental-property-type">Rental Property Type:</label>
+                    <select id="rental-property-type" name="rental-property-type">
+                        <option value="">Select a type</option>
+                        <option value="apartment">Apartment</option>
+                        <option value="townhouse">Townhouse</option>
+                        <option value="condo">Condominium</option>
+                        <option value="duplex">Duplex</option>
+                        <option value="single-family">Single-family Home</option>
+                        <option value="multi-family">Multi-family Home</option>
+                        <option value="bungalow">Bungalow</option>
+                        <option value="mobile-home">Mobile Home</option>
+                        <option value="co-op">Co-op Apartment</option>
+                    </select>
+                </section>
+            
+                <section class="ren-sec2"><!-- no of brdrooms -->
+                    <label for="rental-bedrooms">Number of Bedrooms:</label>
+                    <select id="rental-bedrooms" name="rental-bedrooms">
+                        <option value="studio">Studio (0 bedrooms)</option>
+                        <option value="1-bedroom">1 Bedroom</option>
+                        <option value="2-bedrooms">2 Bedrooms</option>
+                        <option value="3-bedrooms">3 Bedrooms</option>
+                        <option value="4-plus">4+ Bedrooms</option>
+                    </select>
+                </section>
+            
+                <section class="ren-sec3"><!-- rental features-->
+                    <label>Desired Rental Features:</label>
+                    <div>
+                        <input type="checkbox" id="rental-pet-friendly" name="rental-features" value="pet-friendly">
+                        <label for="rental-pet-friendly">Pet-Friendly</label>
+                    </div>
+                    <div>
+                        <input type="checkbox" id="rental-in-unit-laundry" name="rental-features" value="in-unit-laundry">
+                        <label for="rental-in-unit-laundry">In-unit Laundry</label>
+                    </div>
+                    <div>
+                        <input type="checkbox" id="rental-pool" name="rental-features" value="pool">
+                        <label for="rental-pool">Pool</label>
+                    </div>
+                    <div>
+                        <input type="checkbox" id="rental-gym" name="rental-features" value="gym">
+                        <label for="rental-gym">Gym</label>
+                    </div>
+                    <div>
+                        <input type="checkbox" id="rental-parking" name="rental-features" value="parking">
+                        <label for="rental-parking">Parking</label>
+                    </div>
+                    <div>
+                        <input type="checkbox" id="rental-yard" name="rental-features" value="yard">
+                        <label for="rental-yard">Yard/Garden</label>
+                    </div>
+                </section>
+            
+                <section class="ren-sec4"><!-- rental location preference -->
+                    <label>Rental Location Preferences:</label>
+                    <div>
+                        <input type="checkbox" id="rental-neighborhoods" name="rental-location" value="specific-neighborhoods">
+                        <label for="rental-neighborhoods">Specific Neighborhoods</label>
+                    </div>
+                    <div>
+                        <input type="checkbox" id="rental-schools" name="rental-location" value="proximity-schools">
+                        <label for="rental-schools">Proximity to Schools</label>
+                    </div>
+                    <div>
+                        <input type="checkbox" id="rental-public-transport" name="rental-location" value="near-public-transport">
+                        <label for="rental-public-transport">Near Public Transportation</label>
+                    </div>
+                    <div>
+                        <input type="checkbox" id="rental-shopping" name="rental-location" value="close-shopping">
+                        <label for="rental-shopping">Close to Shopping Centers</label>
+                    </div>
+                </section>
+            
+                <section class="ren-sec5"><!-- pricing range -->
+                    <label for="rental-price">Price Range for Renting:</label>
+                    <select id="rental-price" name="rental-price">
+                        <option value="under-500">Under $500</option>
+                        <option value="500-1000">$500 - $1,000</option>
+                        <option value="1000-1500">$1,000 - $1,500</option>
+                        <option value="1500-2000">$1,500 - $2,000</option>
+                        <option value="over-2000">Over $2,000</option>
+                    </select>
+                </section>
+            
+                <section class="ren-sec6"><!-- rental term -->
+                    <label for="rental-term">Rental Term:</label>
+                    <select id="rental-term" name="rental-term">
+                        <option value="short-term">Short Term (Less than 6 months)</option>
+                        <option value="long-term">Long Term (6 months or more)</option>
+                    </select>
+                </section>
+            
+                <section class="ren-sec7"><!-- financing options -->
+                    <label>Preferred Financing Options:</label>
+                    <div>
+                        <input type="radio" id="rental-cash" name="rental-financing" value="cash">
+                        <label for="rental-cash">Cash</label>
+                    </div>
+                    <div>
+                        <input type="radio" id="rental-monthly" name="rental-financing" value="monthly">
+                        <label for="rental-monthly">Monthly Payments</label>
+                    </div>
+                </section>
+            </section>

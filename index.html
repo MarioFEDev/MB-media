@@ -9,6 +9,7 @@
     <link rel="manifest" href="/site.webmanifest">
     <title>MB Media</title>
     <link rel="stylesheet" href="rubik.css">
+    <link rel="stylesheet" href="def.css">
     <style>
         @keyframes blinking{
             0%{
@@ -40,119 +41,6 @@
                 transform: translateY(-10px);
                 opacity: 1;
             }
-        }
-        :root{
-            --main: #091A2B;
-            --main2:#005163;
-            --essence:#3B4876;
-            --greyish:#A8AEAF;
-            --greyishblue:#9bd8e3;
-            --whiteish:#F1F3F4;
-
-
-            --slide-left:'';
-            --fade-in-intro:'';
-        }
-        *{
-            font-family: rubik-regular;
-            color: white;
-        }
-        body, html {
-            margin: 0;
-            padding: 0;
-            width: 100%;
-            overflow-x: hidden;
-        }
-        body{
-            background-color:var(--main);
-            /* padding-bottom:400px; */
-        } 
-        div,nav{
-            border: 0px solid white;
-        }
-        header{
-            width: 100%;
-            height: 90px;
-            background-color: var(--main2);
-            box-shadow: 0px 0px 30px rgba(0, 0, 0, 0.242);
-            display: flex;
-            box-sizing: border-box;
-            padding: 20px ;
-            justify-content: space-between  
-        }
-        .header-sec{
-            width: 100%;
-            height: 90px;
-            background-color: var(--main2);
-            box-shadow: 0px 0px 30px rgba(0, 0, 0, 0.242);
-            display: flex;
-            box-sizing: border-box;
-            padding: 20px ;
-            justify-content: space-between  
-        }
-        .logo-con{
-            display: flex;
-            height: 100%;
-            width: fit-content;
-            border: 0px solid white;
-            align-items: center;
-        }
-        .logo{
-            height: 100%;
-            aspect-ratio: 1/1;
-            background-color: transparent;
-            transform: scale(1.55);
-        }
-        .logo-name{
-            translate: .7em;
-            margin-top: 5%;
-            width: 300px;
-            height: 100%;
-            background-color: transparent;
-            font-family: rubik-bold;
-            color: var(--main);
-            font-size: 14pt;
-        }
-        .smma{
-            font-family: rubik-bold;
-            font-size: 8pt;
-            color: var(--main);
-        }
-        nav{
-            width: 60%;
-            display: flex;
-            align-items: center;
-            justify-content: space-between;
-        }
-        p{
-            padding: 0;
-            margin: 0;
-        }
-        a{
-            text-decoration: none;
-        }
-        .nav-link{
-            color:var(--whiteish);
-            font-family: rubik-bold;
-            transition: all .3s ease-in-out;
-            padding: 10px;
-        }
-        .nav-link:hover{
-            color: var(--greyishblue);
-            transform: scale(1.1);
-            text-shadow: 0px 0px 10px #00000062;
-        }
-        .contact{
-            padding: .85em;
-            background-color: var(--main);
-            color: var(--main);
-            border-radius: 5px;
-            background: white ;
-        }
-        .contact:hover{
-            text-shadow: none;
-            color: white;
-            background-color: var(--main);
         }
         .img-con{
             background:transparent;
@@ -243,19 +131,21 @@
             font-family: rubik-bold;
             font-size: 20px;
             transition: all .5s ease;
+            margin-top: 70px;
         }
         .register:hover{
             background-color:#091a2b6a ;
             backdrop-filter: blur(2px);
             border-color: var(--main2);
             color: var(--greyishblue);
-            transform: scale(1.02);
         }
+       
 
 
         footer{
             width: 100%;
-            height: 400px;
+            height: fit-content;
+            padding-bottom: 10px;
             background-color: black;
             margin-top: 300px;
             display: flex;
@@ -286,22 +176,42 @@
             display: flex;
             flex-direction: column;
         }
+        .image-placeholder {
+            height: 320px;
+            aspect-ratio: 1/1;
+            margin: 0 auto;
+            margin-top: 20px;
+            background-color: transparent;
+        }
+        .address {
+            color: #aaa;
+            margin-top: 20px;
+        }
+        .quote-form{
+            transition: all 2s ease-in-out;
+            overflow: hidden;
+            height: 50px;
+            max-width: 650px;
+            margin: 0 auto;
+            background-color: #a3a5a7;
+            padding: 50px;
+            border-radius: 12px;
+            color: #fff;
+            box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
+            margin-bottom: 30px;
+
+        }
+        .twitter, .insta, .facebook, .mail{
+            transition: all 1s ;
+            text-decoration: none;
+            color:#6b6b6b;
+        }
+        .twitter:hover, .insta:hover, .facebook:hover, .mail:hover{
+         color:white;
+        }
          
 
-        ::-webkit-scrollbar{
-            width: 10px;
-        }
-        ::-webkit-scrollbar-thumb{
-            background-color: var(--main2);
-            width: 6px;
-            border-radius: 10px;
-        }
-        ::selection{
-            background-color: var(--main);
-            color: white;
-        }
-
-
+    
         @media  screen and (max-width : 1050px) {
             .nav-link {
                 font-size: 10pt;
@@ -316,7 +226,7 @@
             }
         }
         @media  screen and (max-width : 820px) {
-           
+        
             header{
                 flex-direction: column;
                 height: fit-content;
@@ -344,29 +254,29 @@
             }
         }
         @media  screen and (max-width : 550px) {
-    
-           .logo-con{
-               transform: scale(.8);
-           }
-           .nav-link {
-               font-size: 8pt;
-               padding: 2px;
-           }
-           .contact{
+
+        .logo-con{
+            transform: scale(.8);
+        }
+        .nav-link {
+            font-size: 8pt;
+            padding: 2px;
+        }
+        .contact{
                 padding: .8em;
-           }
-           .typing{
+        }
+        .typing{
             margin-top: 30px;
-               font-size: 20pt;
-               height: 190px;
-           }
-           .typing::before{
-               font-size: 21pt;
-           }
-           .typing::after{
+            font-size: 20pt;
+            height: 190px;
+        }
+        .typing::before{
+            font-size: 21pt;
+        }
+        .typing::after{
             font-size: 18pt;
-           }
-           .register{
+        }
+        .register{
                 transform: scale(.7);
             }
         }
@@ -415,52 +325,65 @@
             }
         }
 
+
+        
+
     </style>
 </head>
 <body>
     
     <header>
         <div class="logo-con">
-            <div class="logo"><img src="logo.png" alt="logo" width="100%" height="100%"></div>
+            <div class="logo"><img src="MBMEDIALOGO.png" alt="logo" width="70%" height="70%"></div>
             <div class="logo-name"> MB Media <br> <span class="smma">Social Media Marketing Agency<span> </div>
         </div>
         <nav>
             <a href="#" class="nav-link">HOME</a>
             <a href="#" class="nav-link">SERVICES</a>
-            <a href="#" class="nav-link">BOOK A MEETING</a>
-            <a href="form-template.html" class="nav-link">TESTIMONIALS</a>
-            <a href="#" class="nav-link contact">CONTACT US</a>
+            <a href="meeting.html" class="nav-link">BOOK A MEETING</a>
+            <a href="#" class="nav-link">TESTIMONIALS</a>
+            <a href="contact.html" class="nav-link contact">CONTACT US</a>
         </nav>
     </header>
     <section>
         <div class="img-con">
-            <div class="typing"></div>
-            
-            <div class="btn-con"><a href="#"><button class="register">Register as Our Client</button></a></div>
+            <div class="typing"></div>         
+            <div class="btn-con"><a href="client-index.html"><button class="register">Register as Our Client</button></a></div>
         </div>
     </section>
 
 
+    
     <footer>
-        <section class="foot-sec1">
-            <div class="foot-name">
-                    <div class="foot-name-img"> <img src="logomono.png" alt="logo" width="100%" height="100%"></div>
-                    <div class="foot-name-txt">MB MEDIA</div>
+        <div class="containerfoot">
+            <div class="tags">
+                <a href="#home"> Home</a>
+                <a href="#services"> Services</a>
+                <a href="#portfolio"> Portfolio</a>
+                <a href="#about"> About</a>
+                <a href="#contact"> Contact</a>
+                <a href="#faq"> FAQ</a>
+                <a href="#testimonials"> Testimonials</a>
+                <a href="#pricing"> Pricing</a>
+                <a href="#blog"> Blog</a>
+                <a href="#shipping"> Shipping</a>
+                <a href="#returns"> Returns</a>
+                <a href="#reviews"> Reviews </a>
+                <a href="#terms"> Terms of Service</a>
+                <a href="#privacy"> Privacy Policy</a>
+                <a href="#payment"> Payment Methods</a>
             </div>
-            <div class="contacts">
-                <h2>CONTACT INFO</h2>
-                <p>Email: loremispum@gmail.com</p>
+        </div>
+                    <div class="image-placeholder"><img src="logomono.png" height="100%"  ></div>
+            <div class="container">
+                <div class="socials">            
+                 <a href="#" class="insta" target="_blank" ><ion-icon size="large" name="logo-instagram"></ion-icon></a>
+                <a href="#" class="facebook" target="_blank" ><ion-icon size="large" name="logo-facebook"></ion-icon></a>
+                 <a href="#" class="mail" target="_blank" ><ion-icon size="large" name="mail-open-outline"></ion-icon></a>
+                </div>
             </div>
-            <div class="links">
-                <a href="#">ABOUT US</a><br>
-                <a href="#">MORE INFO</a><br>
-                <a href="#">SOCIALS</a><br>
-                <a href="#">PRICING</a>
-            </div>
-        </section>
-        
+            <p class="address">1234 Luxury Street, City, Country</p>
     </footer>
-    <p style="background-color: black; margin: 0px; text-align: center; padding-bottom:30px ;">Copyright © MB Media 2024 All Rights Reserved</p>
     <script src="typing.js"></script>
     <script>
         function loadAnimations(){
@@ -472,5 +395,11 @@
         window.onload(setTimeout(() => {loadAnimations()}, 1000))
 
     </script>
+
+
+
+
+    <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@.1.0/dist/ionicons/ionicons.js"></script>
 </body>
 </html>
